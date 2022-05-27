@@ -7,4 +7,63 @@ Estilização geral
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+body {
+  background: linear-gradient(to right, #292333, #5b41b8);
+}
+
+.grid-container {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.grid-container > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  background-color: #111;
+  color: #eee;
+  transition: all 100ms ease;
+}
+
+.grid-container > button.operator {
+  background: #5741b875;
+}
+
+.grid-container > button.span-two {
+  grid-column: span 2;
+}
+
+.grid-container > button:hover {
+  background-color: #eee;
+  color: #111;
+}
+
+.grid-container > .output {
+  grid-column: span 4;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.grid-container > .output > .previous-op {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.grid-container > .output > .current-op {
+  color: white;
+  font-size: 2.5rem;
 }
